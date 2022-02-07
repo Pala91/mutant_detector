@@ -57,7 +57,7 @@ public class ValidateMutantServiceImpTest {
 
         String[] dna = {"ATGCGA", "CGGTCC", "TTXYGT", "AGAATG", "CGCTTA", "TCTCTG"};
 
-        RuntimeException thrown = Assertions.assertThrows(RuntimeException.class, () -> {
+        Assertions.assertThrows(RuntimeException.class, () -> {
             mutantService.isMutant(dna);
         });
 
